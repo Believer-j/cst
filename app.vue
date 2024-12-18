@@ -1,10 +1,15 @@
 <template>
-  <div>
-    <h1 class="text-3xl font-bold underline  shadow-2xl font-sans text-red-300">
-      Hello world!
-    </h1>
-    <van-icon name="chat-o" />
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
+
+<style>
+body {
+  margin: 0px;
+}
+
+p {
+  margin: 0px;
+}
+</style>
