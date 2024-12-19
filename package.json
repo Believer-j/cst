@@ -20,6 +20,7 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "@vant/nuxt": "^1.0.6"
+    "@vant/nuxt": "^1.0.6",
+    "sass": "^1.83.0"
   }
 }

@@ -12,7 +12,7 @@
             </div>
         </div>
         <van-tabs v-model:active="active" line-width="30px" title-active-color="#7b67f6" title-inactive-color="#868686" color="#7b67f6">
-            <van-tab v-for="(item, index) in tabs">
+            <van-tab v-for="(item, index) in tabs" :key="index">
                 <template #title>
                     <div class=" flex-column flex-items-center" style="margin-bottom: 5px;">
                         <VanImage width="24px" height="24px" :src="`/img/home/${item.imageName}.png`" />
