@@ -12,3 +12,13 @@ export const utilTest = (num: string | number) => {
     const result = Number(str)
     return result ? result : 0
 }
+
+export function copyToClipboard(text: string) {
+    navigator.clipboard.writeText(text)
+        .then(function () {
+            showToast('复制成功')
+        })
+        .catch(function (err) {
+            console.error("无法复制到剪切板", err);
+        });
+}

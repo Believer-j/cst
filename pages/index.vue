@@ -5,6 +5,7 @@
     </van-sticky>
     <HomeBalance />
     <HomeFunctionalArea />
+    <HomeInvite />
   </div>
 </template>
 
