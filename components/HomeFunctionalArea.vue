@@ -4,7 +4,7 @@
             Math.floor(index / 2) === 0 && 'item__marginTopOne',
             item.bgClassName
         ]">
-            <div class="font-15 font-medium" style="margin-top: 17px; margin-left: 15px; color: #0d0e0e;">
+            <div class="font-15 font-weight-medium" style="margin-top: 17px; margin-left: 15px; color: #0d0e0e;">
                 {{ item.title }}
             </div>
             <div class="font-12 flex-row flex-items-center" style="margin-top: 6px; margin-left: 15px;">

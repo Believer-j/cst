@@ -17,7 +17,7 @@
                 <div class="round"></div>
                 <div class=" flex-column">
                     <div class="font-12" style="color: #868686;">{{ item.title }}</div>
-                    <div class="font-15 font-medium" style="color: #0d0e0e; margin-top: 4px;">{{ item.val }}</div>
+                    <div class="font-15 font-weight-medium" style="color: #0d0e0e; margin-top: 4px;">{{ item.val }}</div>
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@
     <van-sticky>
       <HomeHeader />
     </van-sticky>
+    <HomeIDO />
     <HomeBalance />
     <HomeFunctionalArea />
     <HomeInvite />

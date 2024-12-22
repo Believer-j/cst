@@ -2,7 +2,7 @@
     <div class="flex-column" style="margin-top: 40px;">
         <div class="flex-row-center">
             <VanImage src="/img/home/home-invite-line.png" width="16px" height="16px" />
-            <div class="font-medium font-15" style="color: #0d0e0e; margin-left: 6px; margin-right: 6px;">
+            <div class="font-weight-medium font-15" style="color: #0d0e0e; margin-left: 6px; margin-right: 6px;">
                 邀请好友
             </div>
             <VanImage src="/img/home/home-invite-line.png" width="16px" height="16px" />
@@ -11,14 +11,14 @@
             <div class=" flex-column-center" style="margin-top: 10px;">
                 <VanImage src="/img/home/home-invite.png" width="181px" height="100px" />
                 <div class="font-11" style="color: #868686;">邀请奖励(CST)</div>
-                <div class="font-26 font-medium" style="color: #0d0e0e; margin-top: 4px;">123123.312</div>
+                <div class="font-26 font-weight-medium" style="color: #0d0e0e; margin-top: 4px;">123123.312</div>
             </div>
             <div class="inviteInfo flex-row">
                 <div class=" flex-column-center" style="height: 100%; width: 50%;">
                     <p class="font-12" style="color: #868686;">
                         邀请人数
                     </p>
-                    <p class="font-15 font-medium" style="color: #0d0e0e;">
+                    <p class="font-15 font-weight-medium" style="color: #0d0e0e;">
                         45
                     </p>
                 </div>
@@ -26,7 +26,7 @@
                     <p class="font-12" style="color: #868686;">
                         总认购数量
                     </p>
-                    <p class="font-15 font-medium" style="color: #0d0e0e;">
+                    <p class="font-15 font-weight-medium" style="color: #0d0e0e;">
                         23.554454 ETH
                     </p>
                 </div>
