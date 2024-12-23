@@ -117,12 +117,30 @@
                     <p>
                         参与数量
                     </p>
-                    <VanField class="VanField" style="margin-left: 0px; width: 100%; background-color: rgba(219, 219, 219, 0.4); border: none " v-model:model-value="amount" :center="true" placeholder="参与数量"
-                        type="number" :min="0" :max="400" @blur="endInput">
+                    <VanField class="VanField"
+                        style="margin-left: 0px; margin-top: 5px; width: 100%; background-color: rgba(219, 219, 219, 0.4); border: none "
+                        v-model:model-value="amount" :center="true" placeholder="参与数量" type="number" :min="0" :max="400"
+                        @blur="endInput">
                         <template #right-icon>
-                            <p style="color: #0d0e0e; margin-right: 12px">USDT</p>
+                            <p style="color: #0d0e0e; margin-right: 12px">ETH</p>
                         </template>
                     </VanField>
+                    <p style="margin-top: 23px;">
+                        可获得
+                    </p>
+                    <VanField class="VanField"
+                        style="margin-left: 0px; margin-top: 5px; width: 100%; background-color: rgba(219, 219, 219, 0.4); border: none "
+                        v-model:model-value="amount" :center="true" placeholder="参与数量" type="number" :min="0" :max="400"
+                        @blur="endInput">
+                        <template #right-icon>
+                            <p style="color: #0d0e0e; margin-right: 12px">CST</p>
+                        </template>
+                    </VanField>
+                    <div class=" flex-row-center font-14 font-weight-medium"
+                        style="width: 100%; background-color: #0d0e0e; border-radius: 10px; height: 44px; color: white; margin-top: 40px;"
+                        @click="showJoin = false">
+                        确认提交
+                    </div>
                 </div>
             </div>
         </VanPopup>

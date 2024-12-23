@@ -1,9 +1,10 @@
 <template>
     <div class=" flex-row flex-wrap flex-around" style="">
+
         <div v-for="(item, index) in datas" :key="index" class="item flex-column" :class="[
             Math.floor(index / 2) === 0 && 'item__marginTopOne',
             item.bgClassName
-        ]">
+        ]" @click="tap(item)">
             <div class="font-15 font-weight-medium" style="margin-top: 17px; margin-left: 15px; color: #0d0e0e;">
                 {{ item.title }}
             </div>
@@ -19,6 +20,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </template>
 
@@ -29,7 +31,8 @@ const datas = ref([
         subTitle: 'APY：',
         content: '862%',
         color: '#f55454',
-        bgClassName: 'home-func-pledge'
+        bgClassName: 'home-func-pledge',
+        path: '/pledge'
     },
     {
         title: '债券',
@@ -79,6 +82,14 @@ const datas = ref([
     }
 
 ])
+const router = useRouter()
+async function tap(item: any) {
+    // console.log(item.title)
+    // console.log(router.getRoutes())
+    await navigateTo(item.path)
+}
+
+
 </script>
 
 <style scoped lang="scss">
