@@ -39,7 +39,8 @@ const datas = ref([
         subTitle: '折扣：',
         content: '3%',
         color: '#f55454',
-        bgClassName: 'home-func-bond'
+        bgClassName: 'home-func-bond',
+        path: '/bond'
     },
     {
         title: '收益领取',

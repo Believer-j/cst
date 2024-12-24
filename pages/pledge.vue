@@ -1,5 +1,5 @@
 <template>
-    <div class="pledgeWarp">
+    <div class="wrap">
         <van-nav-bar title="质押" :fixed="true" :placeholder="true" :border="false"
             style="--van-nav-bar-title-font-size: 16px; --van-nav-bar-title-text-color: #0d0e0e; --van-nav-bar-background: #f6f6f6">
             <template #left>
@@ -206,10 +206,6 @@ function liftConfirm(index: any) {
     border-radius: 10px;
     width: 71px;
     height: 32px;
-}
-.pledgeWarp {
-    min-height: 100vh;
-    background-color: #f6f6f6;
 }
 
 .highlight {
