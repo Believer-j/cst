@@ -37,6 +37,12 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['confirm'])
+/**
+ * 导出事件
+ */
+defineExpose({
+    showAlert
+})
 
 const show = ref(false)
 const parameterTemp = ref()
@@ -50,10 +56,5 @@ function showAlert(parameter?: any) {
     show.value = true
     parameterTemp.value = parameter
 }
-
-defineExpose({
-    showAlert
-})
-
 
 </script>
