@@ -86,7 +86,9 @@
 </template>
 
 <script setup lang="ts">
+
 const amount = ref('')
+
 </script>
 
 <style>
