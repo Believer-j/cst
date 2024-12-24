@@ -148,18 +148,21 @@
 </template>
 
 <script setup lang="ts">
+
 const showJoin = ref(false)
 const showRule = ref(false)
 const screenWidth = ref(114)
 const rate = ref(1)
+const amount = ref('')
+
 const rateLeft = computed(() => {
     return (screenWidth.value - 114) * rate.value
 })
-const amount = ref('')
 
 onMounted(() => {
     screenWidth.value = window.innerWidth
 })
+
 function endInput(e: Event) {
     console.log(amount.value)
 }
