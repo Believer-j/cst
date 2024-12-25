@@ -48,7 +48,8 @@ const datas = ref([
         content: '862.332',
         unit: ' CST',
         color: '#00ca7d',
-        bgClassName: 'home-func-income'
+        bgClassName: 'home-func-income',
+        path: '/income'
     },
     {
         title: '奖励',
