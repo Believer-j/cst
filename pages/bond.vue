@@ -63,7 +63,7 @@
                     unhighlight-class="highlight" />
                 <div class=" flex-row-center font-14 font-weight-medium"
                     style="background-color: #0d0e0e; margin-top: 20px; border-radius: 8px; height: 40px; margin-top: 20px; color: white;"
-                    @click="">
+                    @click="showBuy = true">
                     购买
                 </div>
             </div>
@@ -103,13 +103,70 @@
                 </div>
             </div>
         </div>
+
+        <VanPopup v-model:show="showBuy" :close-on-click-overlay="false" style="background-color: transparent;">
+            <div class=" flex-column"
+                style="background-color: white; width: 305px; border-radius: 10px; position: relative;">
+                <p class="font-18 font-weight-semibold " style="text-align: center; color: #161823; margin-top: 17px;">
+                    购买债券
+                </p>
+                <VanImage src="/img/close-black.png" width="24px" height="25px"
+                    style="position: absolute; top: 18px; right: 15px;" @click="showBuy = false" />
+                <div class=" flex-column font-weight-medium font-14"
+                    style="margin: 50px 20px 20px 20px; color: #0d0e0e;">
+                    <p>
+                        购买金额
+                    </p>
+                    <VanField class="VanField"
+                        style="margin-left: 0px; margin-top: 5px; width: 100%; background-color: rgba(219, 219, 219, 0.4); border: none "
+                        v-model:model-value="amount" :center="true" placeholder="购买金额" type="number" :min="0"
+                        :max="400">
+                        <template #right-icon>
+                            <p style="color: #0d0e0e; margin-right: 12px">ETH</p>
+                        </template>
+                    </VanField>
+                    <div class=" flex-row flex-items-center" style="margin-top: 23px">
+                        <p>
+                            总计支付ETH金额
+                        </p>
+                        <VanImage src="/img/wh-blue.png" style="width: 16px; height: 16px; margin-left: 5px;"></VanImage>
+                    </div>
+
+                    <VanField class="VanField"
+                        style="margin-left: 0px; margin-top: 5px; width: 100%; background-color: rgba(219, 219, 219, 0.4); border: none "
+                        v-model:model-value="amount" :center="true" placeholder="支付ETH金额" type="number" :min="0"
+                        :max="400">
+                        <template #right-icon>
+                            <p style="color: #0d0e0e; margin-right: 12px">CST</p>
+                        </template>
+                    </VanField>
+                    <p style="margin-top: 23px;">
+                        预估得到CST数量
+                    </p>
+                    <VanField class="VanField"
+                        style="margin-left: 0px; margin-top: 5px; width: 100%; background-color: rgba(219, 219, 219, 0.4); border: none "
+                        v-model:model-value="amount" :center="true" placeholder="预估得到CST数量" type="number" :min="0"
+                        :max="400">
+                        <template #right-icon>
+                            <p style="color: #0d0e0e; margin-right: 12px">CST</p>
+                        </template>
+                    </VanField>
+                    <div class=" flex-row-center font-14 font-weight-medium"
+                        style="width: 100%; background-color: #0d0e0e; border-radius: 10px; height: 44px; color: white; margin-top: 40px;"
+                        @click="showBuy = false">
+                        确认提交
+                    </div>
+                </div>
+            </div>
+        </VanPopup>
+
     </div>
 </template>
 
 <script setup lang="ts">
 
 const amount = ref('')
-
+const showBuy = ref(false)
 
 </script>
 
