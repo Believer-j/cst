@@ -177,8 +177,14 @@
                     <p class=" font-14 font-weight-medium" style="color: #0d0e0e; margin-top: 20px;">
                         节点类型:
                     </p>
-                    <p class="font-12" style="color: #868686; margin-top: 5px;line-height: 22px;"
-                        v-html="highlightText"></p>
+                    <p class="font-12" style="color: #868686; margin-top: 5px;line-height: 22px;">
+                        <span class="highlightTitle">初级节点：</span>邀请三名价值用户，且团队sCST价<br>值达到<span
+                            class="highlightNum">$60000</span><br><span
+                            class="highlightTitle">中级节点：</span>三个部门产生初级节点，且团队sCST价值达到<span
+                            class="highlightNum">$100000</span><br><span
+                            class="highlightTitle">高级节点：</span>三个部门产生高级节点，且团队sCST价值达到<span
+                            class="highlightNum">$200000</span>
+                    </p>
                 </div>
             </div>
 
@@ -203,7 +209,7 @@ const segments = ref([{
     val: '0'
 }])
 const segmentIndex = ref(0)
-const highlightText = `<span class="highlightTitle">初级节点：</span>邀请三名价值用户，且团队sCST价<br>值达到<span class="highlightNum">$60000</span><br><span class="highlightTitle">中级节点：</span>三个部门产生初级节点，且团队sCST价值达到<span class="highlightNum">$100000</span><br><span class="highlightTitle">高级节点：</span>三个部门产生高级节点，且团队sCST价值达到<span class="highlightNum">$200000</span>`
+
 
 function segmentTap(index: number) {
     segmentIndex.value = index

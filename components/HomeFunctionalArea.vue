@@ -63,7 +63,8 @@ const datas = ref([
     {
         title: '董事会',
         subTitle: '多签共管',
-        bgClassName: 'home-func-board'
+        bgClassName: 'home-func-board',
+        path: "/board"
     },
     {
         title: 'IDO释放',
