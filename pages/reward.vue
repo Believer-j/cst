@@ -28,8 +28,8 @@
                 </div>
                 <van-image src="/img/reward-top-bg.png" width="120px" height="120px"
                     style="margin-right: 10px; margin-top: 16px;"></van-image>
-                <div
-                    style="position: absolute; background-color: rgba(13, 14, 14, 1); border-radius: 100pt 0pt 0pt 100pt; width: 42px; height: 22px; right: 0px; top: 12px;">
+                <div style="position: absolute; background-color: rgba(13, 14, 14, 1); border-radius: 100pt 0pt 0pt 100pt; width: 42px; height: 22px; right: 0px; top: 12px;"
+                    @click="showRule = true">
                     <van-image src="/img/pledge/pledge-wh.png" width="16px" height="16px"
                         style="margin-top: 3px; margin-left: 3px;" />
                 </div>
@@ -141,11 +141,57 @@
             </div>
 
         </div>
+
+        <VanPopup v-model:show="showRule" :close-on-click-overlay="false" style="background-color: transparent;">
+            <div class=" flex-column"
+                style="background-color: white; width: 305px; border-radius: 10px; position: relative;">
+                <p class="font-18 font-weight-semibold " style="text-align: center; color: #161823; margin-top: 17px;">
+                    等级规则
+                </p>
+                <VanImage src="/img/close-black.png" width="24px" height="25px"
+                    style="position: absolute; top: 18px; right: 15px;" @click="showRule = false" />
+                <div style="margin: 17px 20px 30px 20px; max-height: 430px; overflow: scroll;">
+                    <div class="font-12"
+                        style="background-color: #f6f6f6; border-radius: 8px; padding: 11px 12px; color: #868686;">
+                        <p>您当前质押CST本金价值</p>
+                        <p class="font-15 font-weight-medium" style="color: #0d0e0e; margin-top: 4px;">
+                            $800
+                        </p>
+                        <div style="border-bottom: 1px dashed #dbdbdb; margin-top: 10px; margin-bottom: 10px;"></div>
+                        <p>团队sCST价值</p>
+                        <p class="font-15 font-weight-medium" style="color: #0d0e0e; margin-top: 4px;">
+                            $800
+                        </p>
+                    </div>
+                    <div class=" font-weight-medium font-15" style="color: #0d0e0e; margin-top: 20px;">
+                        等级规则
+                        <div
+                            style="width: 80px; height: 5px; background: linear-gradient(to right, #7b67f6 0%, white 100%); margin-top: -7px;">
+                        </div>
+                    </div>
+                    <p class=" font-14 font-weight-medium" style="color: #0d0e0e; margin-top: 20px;">
+                        用户类型:
+                    </p>
+                    <van-highlight style="margin-top: 5px;" keywords="$500" source-string="质押CST本金超过$500可成为价值用户"
+                        highlight-class="highlightClass" unhighlight-class="highlight" />
+                    <p class=" font-14 font-weight-medium" style="color: #0d0e0e; margin-top: 20px;">
+                        节点类型:
+                    </p>
+                    <p class="font-12" style="color: #868686; margin-top: 5px;line-height: 22px;"
+                        v-html="highlightText"></p>
+                </div>
+            </div>
+
+        </VanPopup>
+
+
+
     </div>
 </template>
 
 <script setup lang="ts">
 
+const showRule = ref(false)
 const showPopover = ref(false)
 const actions = [{ text: '直推' }, { text: '团队' }]
 const action = ref(actions[0])
@@ -157,6 +203,7 @@ const segments = ref([{
     val: '0'
 }])
 const segmentIndex = ref(0)
+const highlightText = `<span class="highlightTitle">初级节点：</span>邀请三名价值用户，且团队sCST价<br>值达到<span class="highlightNum">$60000</span><br><span class="highlightTitle">中级节点：</span>三个部门产生初级节点，且团队sCST价值达到<span class="highlightNum">$100000</span><br><span class="highlightTitle">高级节点：</span>三个部门产生高级节点，且团队sCST价值达到<span class="highlightNum">$200000</span>`
 
 function segmentTap(index: number) {
     segmentIndex.value = index
@@ -168,7 +215,30 @@ function onSelect(a: any) {
 
 </script>
 
-<style scoped>
+<style>
+.highlightNum {
+    color: #5d5efe;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.highlightTitle {
+    color: #0d0e0e;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.highlight {
+    font-size: 12px;
+    color: #868686;
+}
+
+.highlightClass {
+    color: #5d5efe;
+    font-size: 12px;
+    font-weight: 500;
+}
+
 .item {
     background-color: white;
     border-radius: 10px;
