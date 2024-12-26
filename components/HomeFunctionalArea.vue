@@ -57,7 +57,8 @@ const datas = ref([
         content: '#00ca7d',
         unit: ' CST',
         color: '#00ca7d',
-        bgClassName: 'home-func-reward'
+        bgClassName: 'home-func-reward',
+        path: "/reward"
     },
     {
         title: '董事会',

@@ -12,7 +12,10 @@ export const utilTest = (num: string | number) => {
     const result = Number(str)
     return result ? result : 0
 }
-
+/**
+ * 复制进剪切板
+ * @param text 复制的内容
+ */
 export function copyToClipboard(text: string) {
     navigator.clipboard.writeText(text)
         .then(function () {
