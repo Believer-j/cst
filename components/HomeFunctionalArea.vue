@@ -72,7 +72,8 @@ const datas = ref([
         content: '682.332',
         unit: ' CST',
         color: '#00ca7d',
-        bgClassName: 'home-func-ido'
+        bgClassName: 'home-func-ido',
+        path: '/ido'
     },
     {
         title: '交易',

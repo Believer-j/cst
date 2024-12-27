@@ -3,6 +3,13 @@
     background-color: #f6f6f6;
 }
 
+.black-color {
+    color: #0d0e0e;
+}
+.gray-color {
+    color: #868686;
+}
+
 .flex {
     display: flex;
 }
